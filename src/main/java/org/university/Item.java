@@ -14,9 +14,6 @@ public abstract class Item {
     abstract void borrowItem();
     abstract void returnItem();
 
-    static String generateUniqueID(){
-        return RandomStringUtils.randomNumeric(12);
-    }
 
     public Item(String title, String uniqueID) {
         this.title = title;
