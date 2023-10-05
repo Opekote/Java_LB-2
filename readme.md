@@ -56,7 +56,23 @@ This Java code implements a simple library management system with the following 
     - `listAvailable()`: Lists all available items in the library.
     - `listBorrowed()`: Lists all borrowed items from the library.
 
+
 ## Test Cases (`LibraryTest`)
+
+The `LibraryTest` class contains a set of JUnit test cases that validate the functionality of the library management system. These test cases ensure that the various components of the system work as expected, including registering patrons, lending and returning items, and managing the library's collection of items.
+
+1. **`testRegisterPatron()`**: This test case verifies the functionality of the `registerPatron(Patron)` method in the `Library` class. It checks whether a patron can be successfully registered with the library and confirms that the library's list of patrons contains the registered patron.
+
+2. **`testLendItem()`**: This test case focuses on lending an item to a patron. It first registers a patron, adds an item to the library's collection, and then attempts to lend that item to the patron. The test checks whether the patron's list of borrowed items contains the lent item and whether the item's `isBorrowed` status is correctly updated.
+
+3. **`testReturnItem()`**: This test case validates the functionality of returning an item. It registers a patron, lends an item to the patron, and then attempts to return the item. The test ensures that the item is removed from the patron's list of borrowed items, and its `isBorrowed` status is updated accordingly.
+
+4. **`testAddItemToLibrary()`**: This test case tests the addition of an item to the library's collection. It adds an item to the library and verifies that the library's list of items contains the newly added item.
+
+5. **`testRemoveItemFromLibrary()`**: This test case checks the removal of an item from the library. It adds an item to the library, removes the same item, and ensures that the library's list of items no longer contains the removed item.
+
+These test cases cover essential scenarios and interactions within the library management system, ensuring that it functions correctly. They help in identifying any issues or bugs in the code, providing confidence in the reliability and accuracy of the system's operations. Additionally, these tests can be expanded and customized to cover more specific use cases and edge scenarios as needed.
+
 - Contains JUnit test cases to validate the functionality of the library management system.
 
 ## Additional Notes
