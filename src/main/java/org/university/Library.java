@@ -16,31 +16,13 @@ public class Library implements IManageable {
 
     }
 
-    public void lendItem(Patron patron, Item item) throws IllegalArgumentException{
+    public void lendItem(Patron patron, Item item){
         if(!patrons.contains(patron)){
-            try {
-
-                throw new IllegalArgumentException("Patron is not registered!");
-
-
-            }
-            catch (IllegalArgumentException ex){
-                System.err.println(ex.getMessage());
-
-            }
+            System.err.println("Patron is not registered!");
 
         }
         else if(!items.contains(item)){
-            try {
-
-                throw new IllegalArgumentException("No a such book in a library!");
-
-
-            }
-            catch (IllegalArgumentException ex){
-                System.err.println(ex.getMessage());
-
-            }
+            System.err.println("No a such book in a library!");
 
         }
         else {
@@ -51,29 +33,11 @@ public class Library implements IManageable {
     }
     public void returnItem(Patron patron, Item item){
         if(!patrons.contains(patron)){
-            try {
-
-                throw new IllegalArgumentException("Patron is not registered!");
-
-
-            }
-            catch (IllegalArgumentException ex){
-                System.err.println(ex.getMessage());
-
-            }
+            System.err.println("Patron is not registered!");
 
         }
         else if(!items.contains(item)){
-            try {
-
-                throw new IllegalArgumentException("No a such book in a library!");
-
-
-            }
-            catch (IllegalArgumentException ex){
-                System.err.println(ex.getMessage());
-
-            }
+            System.err.println("No a such book in a library!");
 
         }
         else {
@@ -84,16 +48,7 @@ public class Library implements IManageable {
     }
     public void add(Item item){
         if(items.contains(item)){
-            try {
-
-                throw new IllegalArgumentException("This book already exist");
-
-
-            }
-            catch (IllegalArgumentException ex){
-                System.err.println(ex.getMessage());
-
-            }
+            System.err.println("This book already exist");
 
         }
         else{
@@ -106,16 +61,7 @@ public class Library implements IManageable {
     public void remove(Item item){
 
         if(!items.contains(item)){
-            try {
-
-                throw new IllegalArgumentException("No a such book in a library!");
-
-
-            }
-            catch (IllegalArgumentException ex){
-                System.err.println(ex.getMessage());
-
-            }
+            System.err.println("No a such book in a library!");
 
         }
         else{
